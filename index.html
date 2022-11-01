@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>Company24</title>
+
+</head>
+
+<body>
+    <div class="gray"></div>
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <img src="/assets/social/lawyer-logo 1.svg" alt="лого" srcset="" style="width: 178px;height: 25px;">
+                <div id="nav-icon3">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav id="anotherPage">
+                    <span class="inner-wrapper wrapper-15">
+                        <a class="link hover-15" href="#">Преимущества</a>
+                    </span>
+                    <span class="inner-wrapper wrapper-15">
+                        <a class="link hover-15" href="#">О нас</a>
+                    </span>
+                    <span class="inner-wrapper wrapper-15">
+                        <a class="link hover-15" href="#">Услуги</a>
+                    </span>
+                    <span class="inner-wrapper wrapper-15">
+                        <a class="link hover-15" href="#">Команда</a>
+                    </span>
+                    <span class="inner-wrapper wrapper-15">
+                        <a class="link hover-15" href="#">Отзывы</a>
+                    </span>
+                    <span class="inner-wrapper wrapper-15">
+                        <a class="link hover-15" href="#">Команда</a>
+                    </span>
+                </nav>
+                <nav id="social">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-brands fa-vk icon"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-brands fa-telegram icon"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram icon"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-whatsapp icon"></i></a>
+                        </li>
+
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="accordion">
+                <div class="title">
+                    <h2>Часто задаваемые вопросы</h2>
+                </div>
+                <div class="section first">
+                    <p>Lorem ipsum dolor sit?</p>
+                    <img src="/assets/Vector.png" class="open_close" alt="галочка">
+                </div>
+                <div class="conten">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, numquam ullam. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Aut molestiae, aperiam quod error autem et illum
+                        architecto. Unde, exercitationem est.</p>
+                </div>
+
+                <div class="section">
+                    <p>Lorem ipsum dolor sit amet?</p>
+                    <img src="/assets/Vector.png" class="open_close" alt="галочка">
+                </div>
+                <div class="conten">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, numquam ullam. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Ut, sunt?</p>
+                </div>
+
+                <div class="section">
+                    <p>Lorem ipsum dolor sit amet?</p>
+                    <img src="/assets/Vector.png" class="open_close" alt="галочка">
+                </div>
+                <div class="conten">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, numquam ullam.</p>
+                </div>
+
+                <div class="section">
+                    <p>Lorem ipsum dolor sit amet?</p>
+                    <img src="/assets/Vector.png" class="open_close" alt="галочка">
+                </div>
+                <div class="conten">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, numquam ullam.</p>
+                </div>
+
+                <div class="section">
+                    <p>Lorem ipsum dolor sit amet?</p>
+                    <img src="/assets/Vector.png" class="open_close" alt="галочка">
+                </div>
+                <div class="conten">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, numquam ullam. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Atque magni error nisi similique, nam explicabo.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot_wrapper">
+                <h4>© 2022 All rights reserved.</h4>
+                <div class="logo-bambit-wrapper">
+                    <div class="visible">
+                        <p>MADE BY</p>
+                        <div class="logo-bambit">
+                            <p>BAMBIT</p>
+                        </div>
+                    </div>
+                    <div class="unvisible">
+                        <p>BAMBIT <br> <span style="font-family: 'Press Start 2P'; font-size: 7px;">агентство цифровой
+                                трансформации</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelectorAll('.first').forEach((el) => {
+            let content = el.nextElementSibling;
+            let child = el.querySelector('.open_close')
+            content.style.maxHeight = content.scrollHeight + 'px'
+            el.style.borderBottom = '0'
+            child.style.transform = 'rotateZ(180deg)'
+            // child.style.transform = 'rotateZ(180deg)'
+        })
+    </script>
+    <script>
+        document.querySelectorAll('.section').forEach((el) => {
+            el.addEventListener('click', () => {
+                let content = el.nextElementSibling;
+                let child = el.querySelector('.open_close')
+                if (content.style.maxHeight) {
+                    document.querySelectorAll('.conten').forEach((el) => el.style.maxHeight = null)
+                    el.style.borderBottom = '1px solid #4366AE'
+                    child.style.transform = 'rotateZ(0deg)'
+                } else {
+                    document.querySelectorAll('.conten').forEach((el) => el.style.maxHeight = null)
+                    document.querySelectorAll('.section').forEach((el) => el.style.borderBottom = '1px solid #4366AE')
+                    document.querySelectorAll('.open_close').forEach((el) => el.style.transform = 'rotateZ(0deg)')
+                    content.style.maxHeight = content.scrollHeight + 'px'
+                    el.style.borderBottom = '0'
+                    child.style.transform = 'rotateZ(180deg)'
+                }
+
+            })
+        })
+
+        document.querySelectorAll('#nav-icon3').forEach((el) => {
+            el.addEventListener('click', () => {
+                el.classList.toggle('open')
+            })
+        })
+
+        document.querySelectorAll('#nav-icon3').forEach((el) =>{
+            el.addEventListener('click', () => {
+                document.querySelectorAll('#nav-icon3').forEach((nav) =>{nav.classList.toggle('active')})
+                document.querySelectorAll('#anotherPage').forEach((page) =>{page.classList.toggle('active')})
+                document.querySelectorAll('#social').forEach((social) =>{social.classList.toggle('active')})
+                document.querySelectorAll('.gray').forEach((gray) =>{gray.classList.toggle('active')})
+            })
+        })
+
+    </script>
+</body>
+
+</html>
